@@ -98,6 +98,21 @@ img.full-view {
   @media screen
 }
 
+.mb80 {
+  margin-bottom: 80px;
+}
+
+.side-discription {
+  margin-left: 24px;
+  height: 160px;
+}
+
+.side-discription h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+
 .flex-container {
   display: -webkit-flex;
   display: -ms-flex;
@@ -157,6 +172,17 @@ img.full-view {
   border: none;
   color: #f1f1f1;
 }
+
+.glaph-container {
+  margin: 40px auto;
+}
+
+.glaph-container canvas {
+  width: 100%;
+  max-width: 700px;
+  min-width: 400px;
+}
+
 
 /**** button ****/
 button.primary {
@@ -223,4 +249,33 @@ button.danger {
 }
 .status.monster span {
   color: #fa3aa1;
+}
+
+
+/**** icon ****/
+.icon-hart {
+  font-size: 86px;
+  font-weight: normal;
+  font-style: normal;
+  color: #fa3aa1;
+}
+
+/**** transition ****/
+.moving {
+  position: relative;
+  animation: moving 1.5s ease 0s infinite alternate none running;
+}
+
+.pulldown {
+  cursor: pointer;
+  color: #1219fc;
+}
+@keyframes moving {
+  0% {
+    top: 7px;
+  }
+
+  100% {
+    top: -7px;
+  }
 }

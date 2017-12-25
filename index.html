@@ -199,14 +199,50 @@
 
     <section class="wrapper" id="resources">
       <h2>Resources</h2>
-      <div class="flex-container">
+      <div class="flex-container mb80">
         <div class="flex-item-6-12">
-          <img src="img/monster_p.png" alt="" class="flex-img">
+          <img src="img/monster_p.png" alt="" class="flex-img moving">
         </div>
         <div class="flex-item-6-12">
-
           <div class="status monster">MONSTER IN <span>Pacific Ocean</span></div>
         </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item-6-12 md-12">
+          <div class="flex-container">
+            <div class="flex-item-4-12">
+              <img src="img/kurage_p.png" alt="" class="flex-img">
+            </div>
+            <div class="flex-item-8-12">
+              <div class="side-discription">
+                <h3>ROBOTS</h3>
+                <p><strong>TOTAL: ×397</strong></p>
+                <p><strong>ACTIVE: ×259</strong></p>
+              </div>
+            </div>
+            <div class="hide glaph-container">
+              <canvas id="ct_juery"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-6-12 md-12">
+          <div class="flex-container">
+            <div class="flex-item-4-12">
+              <i class="icon-hart">♥</i>
+            </div>
+            <div class="flex-item-8-12">
+              <div class="side-discription">
+                <h3>LOVE ENERGY</h3>
+                <p><strong>TOTAL: ×1048384</strong></p>
+                <p><strong>TODAY: ×38942</strong></p>
+              </div>
+            </div>
+            <div class="hide glaph-container">
+              <canvas id="ct_energy"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
@@ -420,6 +456,46 @@
     },
     options: {
       cutoutPercentage: 70,
+    }
+  });
+
+  // juery robots glaph
+  var ctj = document.getElementById("ct_juery").getContext('2d');
+  var ct_juery = new Chart(ctj, {
+    type: 'line',
+    data: {
+      labels: ['9/16', '10/1', '10/16', '11/1', '11/16', '12/1', '12/16'],
+      datasets: [{
+        label: 'TOTAL',
+        data: [300, 300, 350, 360, 360, 380, 390],
+        lineTension: 0,
+        borderColor: "rgba(48,132,242,1)",
+        pointBorderColor: "rgba(48,132,242,1)",
+        backgroundColor: "rgba(0,0,0,0)",
+      }, {
+        label: 'ACTIVE',
+        data: [124, 241, 290, 264, 299, 301, 259],
+        lineTension: 0,
+        borderColor: "rgba(43,214,123,1)",
+        pointBorderColor: "rgba(43,214,123,1)",
+        backgroundColor: "rgba(0,0,0,0)",
+      }],
+    }
+  });
+
+  var cte = document.getElementById("ct_energy").getContext('2d');
+  var ct_energy = new Chart(cte, {
+    type: 'line',
+    data: {
+      labels: ['9/16', '10/1', '10/16', '11/1', '11/16', '12/1', '12/16'],
+      datasets: [{
+        label: 'TOTAL',
+        data: [912421, 924526, 953899, 971082, 997102, 1014429, 1038325],
+        lineTension: 0,
+        borderColor: "rgba(48,132,242,1)",
+        pointBorderColor: "rgba(21,61,182,1)",
+        backgroundColor: "rgba(0,0,0,0)",
+      }],
     }
   });
 
