@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@font-face {
+	font-family: 'manifesto';
+	src: url(font/MANIFESTO.ttf);
+}
+
+body {
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+header {
+  background-color: rgba(0,0,0,0.8);
+}
+
+h1.logo {
+  margin: 0 16px;
+  padding: 16px 0;
+  color: #f3f3f3;
+}
+
+img.full-view {
+  width: 100%;
+}
