@@ -70,6 +70,10 @@ h3, h4 {
   font-weight: normal;
 }
 
+h4 {
+  margin: 12px 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -139,9 +143,27 @@ img.full-view {
 }
 
 .chart-container button {
+  cursor: pointer;
   width: 100%;
+  margin: 8px 0;
+  padding: 6px 0;
+  border: none;
+  color: #f1f1f1;
 }
 
+/**** button ****/
+button.primary {
+  background-color: #337aea;
+}
+
+button.secondary {
+  background-color: #3aca8a;
+}
+
+button.danger {
+  background-color: #ca1209;
+  font-weight: bold;
+}
 
 /* lovely */
 .chart-container.lovely h3::before {
