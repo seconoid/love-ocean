@@ -119,10 +119,18 @@ img.full-view {
   width: 25%;
 }
 
+.flex-img {
+  width: 100%;
+  height: 100%;
+}
+
 /* small screen layout */
 @media (max-width:900px) {
   .wrapper {
     margin: 140px 16px;
+  }
+  .md-12 {
+    width: 100%;
   }
 }
 
@@ -209,4 +217,11 @@ button.danger {
 }
 .status.danger {
   color: #fa7a41;
+}
+.status.monster {
+  text-align: center;
+  font-size: 64px;
+}
+.status.monster span {
+  color: #fa3aa1;
 }
