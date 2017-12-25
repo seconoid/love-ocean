@@ -6,12 +6,409 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/initialize.css">
   <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/Chart.bundle.js"></script>
   <title>Love Ocean</title>
 </head>
 <body>
   <header>
-    <h1 class="logo">LOVE OCEAN</h1>
+    <h1 class="logo">LOVE OCEAN<span>for admin</span></h1>
+    <ul>
+      <li><a href="#myarea">MY AREA</a></li>
+      <li><a href="#world">WORLD</a></li>
+    </ul>
   </header>
-  <img src="img/world.png" alt="世界地図" class="full-view">
-</body>
+  <div class="container">
+    <section>
+      <img src="img/world.png" alt="世界地図" class="full-view">
+    </section>
+    <section class="wrapper" id="myarea">
+      <h2>MY AREA STATUS</h2>
+      <div class="flex-container">
+        <div class="flex-item-6-12">
+          <div class="chart-container lovely">
+            <h3>Sea of Japan - 日本海</h3>
+            <div class="flex-container">
+              <div class="chart-container flex-item-8-12">
+                <canvas id="reg1"></canvas>
+                <span class="chart-cnt">86<small>%</small></span>
+              </div>
+              <div class="flex-item-4-12">
+                <h4>STATUS: <span class="status lovely">LOVELY</span></h4>
+                <button>yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container lovely">
+            <h3>Pacific Ocean - 太平洋</h3>
+            <div class="flex-container">
+              <div class="chart-container flex-item-8-12">
+                <canvas id="reg2"></canvas>
+                <span class="chart-cnt">81<small>%</small></span>
+              </div>
+              <div class="flex-item-4-12">
+                <h4>STATUS: <span class="status lovely">LOVELY</span></h4>
+                <button>yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container safe">
+            <h3>East China - 東シナ海</h3>
+            <div class="flex-container">
+              <div class="chart-container flex-item-8-12">
+                <canvas id="reg3"></canvas>
+                <span class="chart-cnt">61<small>%</small></span>
+              </div>
+              <div class="flex-item-4-12">
+                <h4>STATUS: <span class="status safe">SAFETY</span></h4>
+                <button>yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container lovely">
+            <h3>Inland Sea - 瀬戸内海</h3>
+            <div class="flex-container">
+              <div class="chart-container flex-item-8-12">
+                <canvas id="reg4"></canvas>
+                <span class="chart-cnt">91<small>%</small></span>
+              </div>
+              <div class="flex-item-4-12">
+                <h4>STATUS: <span class="status lovely">LOVELY</span></h4>
+                <button>yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container danger">
+            <h3>Okhotsk - オホーツク海</h3>
+            <div class="flex-container">
+              <div class="chart-container flex-item-8-12">
+                <canvas id="reg5"></canvas>
+                <span class="chart-cnt">32<small>%</small></span>
+              </div>
+              <div class="flex-item-4-12">
+                <h4>STATUS: <span class="status danger">DANGER</span></h4>
+                <button>yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper" id="world">
+      <h2>WORLD STATUS</h2>
+      <div class="flex-container">
+        <div class="flex-item-6-12">
+          <div class="chart-container lovely">
+            <h3>Arctic Ocean - 北極海</h3>
+            <div class="flex-container">
+              <div class="chart-container flex-item-8-12">
+                <canvas id="world1"></canvas>
+                <span class="chart-cnt">82<small>%</small></span>
+              </div>
+              <div class="flex-item-4-12">
+                <h4>STATUS: <span class="status lovely">LOVELY</span></h4>
+                <button>yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container safe">
+          <h3>Atlantic Ocean - 大西洋</h3>
+          <div class="flex-container">
+            <div class="chart-container flex-item-8-12">
+              <canvas id="world2"></canvas>
+              <span class="chart-cnt">70<small>%</small></span>
+            </div>
+            <div class="flex-item-4-12">
+              <h4>STATUS: <span class="status safe">SAFETY</span></h4>
+              <button>yes</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container danger">
+          <h3>Indian Ocean - インド洋</h3>
+          <div class="flex-container">
+            <div class="chart-container flex-item-8-12">
+              <canvas id="world3"></canvas>
+              <span class="chart-cnt">42<small>%</small></span>
+            </div>
+            <div class="flex-item-4-12">
+              <h4>STATUS: <span class="status danger">DANGER</span></h4>
+              <button>yes</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container lovely">
+          <h3>Pacific Ocean - 太平洋</h3>
+          <div class="flex-container">
+            <div class="chart-container flex-item-8-12">
+              <canvas id="world4"></canvas>
+              <span class="chart-cnt">95<small>%</small></span>
+            </div>
+            <div class="flex-item-4-12">
+              <h4>STATUS: <span class="status lovely">LOVELY</span></h4>
+              <button>yes</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="flex-item-6-12">
+          <div class="chart-container lovely">
+          <h3>Southern Ocean - 南洋</h3>
+          <div class="flex-container">
+            <div class="chart-container flex-item-8-12">
+              <canvas id="world5"></canvas>
+              <span class="chart-cnt">88<small>%</small></span>
+            </div>
+            <div class="flex-item-4-12">
+              <h4>STATUS: <span class="status lovely">LOVELY</span></h4>
+              <button>yes</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+  // registration
+  var ctr1 = document.getElementById("reg1").getContext('2d');
+  var reg1 = new Chart(ctr1, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#ea3a9a",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [86, 14]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctr2 = document.getElementById("reg2").getContext('2d');
+  var reg2 = new Chart(ctr2, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#ea3a9a",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [81, 19]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctr3 = document.getElementById("reg3").getContext('2d');
+  var reg3 = new Chart(ctr3, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#23ba4c",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [61, 39]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctr4 = document.getElementById("reg4").getContext('2d');
+  var reg4 = new Chart(ctr4, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#ea3a9a",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [91, 9]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctr5 = document.getElementById("reg5").getContext('2d');
+  var reg5 = new Chart(ctr5, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#fa7a41",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [32, 68]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  // world
+  var ctw1 = document.getElementById("world1").getContext('2d');
+  var world1 = new Chart(ctw1, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#ea3a9a",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [82, 18]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctw2 = document.getElementById("world2").getContext('2d');
+  var world2 = new Chart(ctw2, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#23ba4c",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [70, 30]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctw3 = document.getElementById("world3").getContext('2d');
+  var world3 = new Chart(ctw3, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#fa7a41",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [42, 58]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctw4 = document.getElementById("world4").getContext('2d');
+  var world4 = new Chart(ctw4, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#ea3a9a",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [95, 5]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  var ctw5 = document.getElementById("world5").getContext('2d');
+  var world5 = new Chart(ctw5, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        backgroundColor: [
+          "#ea3a9a",
+          "rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255,255,255,0)",
+          "rgba(255,255,255,0)",
+        ],
+        data: [88, 12]
+      }]
+    },
+    options: {
+      cutoutPercentage: 70,
+    }
+  });
+
+  // スムーススクロール
+  $(function(){
+  	$('a[href^="#"]').click(function(){
+  		var speed = 500;
+  		var href= $(this).attr("href");
+  		var target = $(href == "#" || href == "" ? 'html' : href);
+  		var position = target.offset().top - 117;
+  		$("html, body").animate({scrollTop:position}, speed, "swing");
+  		return false;
+  	});
+  });
+  </script>
+  </body>
 </html>
